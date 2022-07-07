@@ -31,7 +31,10 @@ jobs:
         working-directory: ${{matrix.directories}}
 
       - name: Terraform FMT
-        run: terraform fmt -check
+        run: |
+          terraform fmt -diff
+          terraform fmt -check
+        
         working-directory: ${{matrix.directories}}
 
       - name: Lint Code
