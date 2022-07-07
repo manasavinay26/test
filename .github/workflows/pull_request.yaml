@@ -57,7 +57,7 @@ jobs:
         with:
           directory: ${{matrix.directories}}
           quiet: true
-          soft_fail: false
+          soft_fail: true
           framework: terraform
           output_format: github_failed_only
 
